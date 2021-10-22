@@ -5,8 +5,11 @@ using UnityEngine;
 
 public class Element : MonoBehaviour
 {
+    // the name card
     public GameObject banner;
+    // the entire system of the game
     public Manager manager;
+    
     public Sprite uiSprite;
     //public GameObject player;
     // Start is called before the first frame update
@@ -22,8 +25,12 @@ public class Element : MonoBehaviour
         
     }
 
+    
     public void OnTriggerEnter(Collider other)
     {
+        /* if the element collides with "Player" tag,
+           */
+        
         if (other.gameObject.CompareTag("Player") )
         {
             manager.UpdateVisualElement(uiSprite);
